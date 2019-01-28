@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationsChecking" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZDL-74-U7Y">
+                                <rect key="frame" x="16" y="318" width="345" height="30"/>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="1NK-Ki-HO1"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kZr-Op-XHP">
+                                <rect key="frame" x="108" y="530" width="158" height="96"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="xk6-CN-hRN"/>
+                                </constraints>
+                                <state key="normal" image="icons8-heart-outline-50"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ntb-DR-oKs"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duck" translatesAutoresizingMaskIntoConstraints="NO" id="w7f-48-yBr">
+                                <rect key="frame" x="101" y="151" width="158" height="109"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="109" id="IJE-x7-gOD"/>
+                                    <constraint firstAttribute="width" constant="158" id="fDi-Uh-k3I"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w7f-48-yBr" secondAttribute="trailing" constant="116" id="42T-wd-Qm1"/>
+                            <constraint firstItem="kZr-Op-XHP" firstAttribute="trailing" secondItem="w7f-48-yBr" secondAttribute="trailing" constant="7" id="6vj-8E-zOB"/>
+                            <constraint firstItem="w7f-48-yBr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="131" id="HsO-Qk-Bmi"/>
+                            <constraint firstItem="w7f-48-yBr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="101" id="YfU-yJ-i7K"/>
+                            <constraint firstItem="ZDL-74-U7Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="298" id="eTJ-bW-qzo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZDL-74-U7Y" secondAttribute="trailing" constant="16" id="eag-vC-b3S"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kZr-Op-XHP" secondAttribute="bottom" constant="41" id="kLv-X4-Hby"/>
+                            <constraint firstItem="ZDL-74-U7Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="mHP-EZ-JNU"/>
+                            <constraint firstItem="kZr-Op-XHP" firstAttribute="leading" secondItem="w7f-48-yBr" secondAttribute="leading" constant="7" id="nn2-0d-tAb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZDL-74-U7Y" secondAttribute="bottom" constant="320" id="vgJ-A9-q8q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttoin" destination="kZr-Op-XHP" id="fDZ-2R-e14"/>
+                        <outlet property="image" destination="w7f-48-yBr" id="K0a-Uz-kUV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="duck" width="512" height="512"/>
+        <image name="icons8-heart-outline-50" width="37.5" height="37.5"/>
+    </resources>
+</document>
